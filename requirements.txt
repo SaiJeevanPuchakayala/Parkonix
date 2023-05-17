@@ -1,0 +1,13 @@
+imutils==0.5.4
+keras==2.11.0
+matplotlib==3.7.1
+numpy==1.23.3
+opencv-python==4.6.0.66
+pandas==1.5.3
+Pillow==9.4.0
+scikit-learn==1.2.1
+scipy==1.10.1
+streamlit==1.19.0
+tensorflow==2.11.0
+urllib3==1.26.14
+streamlit_drawable_canvas==0.8.0

@@ -1,0 +1,2 @@
+0 Healthy
+1 Parkinson Diseased
