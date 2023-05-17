@@ -66,6 +66,7 @@ canvas_size = 345
 
 with col1:
     # Create a canvas component
+    st.subheader("Drawable Canvas")
     canvas_image = st_canvas(
         fill_color="rgba(255, 165, 0, 0.3)",
         stroke_width=stroke_width,
@@ -80,6 +81,7 @@ with col1:
     )
 
 with col2:
+    st.subheader("Preview")
     if canvas_image.image_data is not None:
         # Get the numpy array (4-channel RGBA 100,100,4)
         input_numpy_array = np.array(canvas_image.image_data)
