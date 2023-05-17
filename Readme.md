@@ -5,6 +5,10 @@
 
 <br>
 
+![Parkinson's Disease](./Images/diseased_person.png)
+
+<br>
+
 Parkonix is an advanced algorithm developed for the accurate detection of Parkinson's disease. Based on the research article "Automated Parkinson's Disease Detection Based on Handwriting Movement" by Rigas et al., this repository contains the implementation of Parkonix using Teachable Machine.
 
 <br>
@@ -36,8 +40,6 @@ Parkinson's disease is a neurodegenerative disorder that affects motor functions
 
 [Teachable Machine](https://teachablemachine.withgoogle.com/)
 
-![Teachable Machine](./Images/TeachableMachine.jpg)
-
 Teachable Machine is an innovative platform developed by Google that allows users to build custom machine learning models without the need for coding or extensive technical knowledge. The platform utilizes a simple drag-and-drop interface that allows users to input data and train machine learning models quickly and easily.
 
 Teachable Machine has several features that make it an ideal tool for building custom machine learning models. Firstly, it allows users to train models using a variety of data types, such as images, sounds, and sensor data. Secondly, it provides users with the ability to choose from a range of pre-built machine learning models, such as image classification and sound recognition, or to build custom models from scratch.
@@ -53,13 +55,13 @@ Teachable Machine has several features that make it an ideal tool for building c
 ### Step 1: Clone this repository
 Run:
 ```bash
-git clone https://github.com/SaiJeevanPuchakayala/BinSpy
+git clone https://github.com/SaiJeevanPuchakayala/Parkonix
 ```
 
-### Step 2: Navigate to the BinSpy directory
+### Step 2: Navigate to the Parkonix directory
 Run:
 ```bash
-cd BinSpy
+cd Parkonix
 ```
 ### Step 3: Install the python libraries
 Run:
@@ -117,18 +119,3 @@ gatherUsageStats = false
 ### **If you find my GitHub repository useful, why not give it a star? It's like giving a little virtual high-five that makes my day!**
 
 <br>
-
-## ⭐  Contributing
-Contributions to Parkonix are welcome! If you have any suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request. Together, we can enhance the algorithm and make a positive impact in Parkinson's disease detection.
-
-<br>
-
-## ⭐  License
-Parkonix is released under the MIT License, allowing for open and collaborative development.
-
-<br>
-
-## ⭐  Acknowledgments
-We would like to express our gratitude to the authors of the research article "Automated Parkinson's Disease Detection Based on Handwriting Movement" for their valuable contributions to the field of Parkinson's disease detection.
-
-Please refer to the original research article for more details on the methodology, experimental setup, and results.
