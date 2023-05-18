@@ -40,6 +40,8 @@ Parkinson's disease is a neurodegenerative disorder that affects motor functions
 
 [Teachable Machine](https://teachablemachine.withgoogle.com/)
 
+![Teachable Machine Demo](./Images/teachablemachine_demo.jpg)
+
 Teachable Machine is an innovative platform developed by Google that allows users to build custom machine learning models without the need for coding or extensive technical knowledge. The platform utilizes a simple drag-and-drop interface that allows users to input data and train machine learning models quickly and easily.
 
 Teachable Machine has several features that make it an ideal tool for building custom machine learning models. Firstly, it allows users to train models using a variety of data types, such as images, sounds, and sensor data. Secondly, it provides users with the ability to choose from a range of pre-built machine learning models, such as image classification and sound recognition, or to build custom models from scratch.

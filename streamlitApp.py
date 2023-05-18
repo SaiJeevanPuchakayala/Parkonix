@@ -7,6 +7,7 @@ import numpy as np
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import pandas as pd
 from streamlit_drawable_canvas import st_canvas
+import uuid
 
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
@@ -15,11 +16,11 @@ np.set_printoptions(suppress=True)
 # Define the layout of the app
 st.set_page_config(page_title="Parkonix", page_icon=":medical_symbol:")
 
-st.title(
-    "Parkonix"
-)
+st.title("Parkonix")
 
-st.header("Unveiling Parkinson's with Precision - 83% Accurate Detection Algorithm Trained on Spiral Sketches.")
+st.header(
+    "Unveiling Parkinson's with Precision - 83% Accurate Detection Algorithm Trained on Spiral Sketches."
+)
 
 st.write(
     "Try drawing a Spiral and watch how an AI Model will detect the Parkinson Disease."
@@ -90,6 +91,12 @@ with col2:
         st.image(input_image, use_column_width=True)
 
 
+def generate_user_input_filename():
+    unique_id = uuid.uuid4().hex
+    filename = f"user_input_{unique_id}.png"
+    return filename
+
+
 def predict_parkinsons(img_path):
     best_model = load_model("./keras_model.h5", compile=False)
 
@@ -106,11 +113,16 @@ def predict_parkinsons(img_path):
 
     # Get the RGBA PIL image
     input_image = Image.fromarray(input_numpy_array.astype("uint8"), "RGBA")
-    input_image.save("user_input.png")
-    print("Image Saved!")
+
+    # Generate a unique filename for the user input
+    user_input_filename = generate_user_input_filename()
+
+    # Save the image with the generated filename
+    input_image.save(user_input_filename)
+    print("Image Saved!")   
 
     # Replace this with the path to your image
-    image = Image.open("user_input.png").convert("RGB")
+    image = Image.open(user_input_filename).convert("RGB")
 
     # resizing the image to be at least 224x224 and then cropping from the center
     size = (224, 224)
@@ -132,7 +144,7 @@ def predict_parkinsons(img_path):
     confidence_score = prediction[0][index]
 
     Detection_Result = f"The model has detected {class_name[2:]}, with Confidence Score: {str(np.round(confidence_score * 100))[:-2]}%."
-    os.remove("user_input.png")
+    os.remove(user_input_filename)
     print("Image Removed!")
     return Detection_Result, prediction
 
