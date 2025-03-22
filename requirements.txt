@@ -11,3 +11,4 @@ streamlit==1.19.0
 tensorflow==2.11.0
 urllib3==1.26.14
 streamlit_drawable_canvas==0.8.0
+altair==4.2.2
